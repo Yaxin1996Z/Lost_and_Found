@@ -1,0 +1,27 @@
+/* pages/tabLost/tabLost.wxss */
+form {
+  width: 100%;
+}
+.section {
+  display: flex;
+  padding: 5px;
+}
+
+.section__title{
+  display: inline-block;
+  min-width: 180rpx;
+  margin-left: 20rpx;
+}
+
+.icon{
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+}
+
+input{
+  position: relative;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 17px;
+}

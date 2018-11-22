@@ -1,10 +1,63 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  /* justify-content: space-between; */
+  padding: 100rpx 0;
   box-sizing: border-box;
 } 
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.page__hd{
+  padding: 80rpx;
+  text-align: center;
+}
+.page__bd{
+  padding: 0 30rpx 40rpx;
+}
+.page__foot{
+  margin: 100rpx 0 30rpx 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 25;
+}
+checkbox, radio{
+  margin-right: 10rpx;
+}
+button{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+input {
+  width: 100%;
+}
+.btn-area{
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}
+.item {
+  margin: 20rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  transition: opacity .3s;
+}
+.item-text{
+   flex: 1;
+}
+.navigator-arrow{
+  padding-right: 26rpx;
+  position: relative;
+}

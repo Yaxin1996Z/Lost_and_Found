@@ -1,0 +1,4 @@
+/* pages/publish/publish.wxss */
+.navigator-text{
+  text-align: center;
+}

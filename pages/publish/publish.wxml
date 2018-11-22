@@ -1,0 +1,13 @@
+<!--pages/publish/publish.wxml-->
+<view class='page__hd'>
+  <view class="title">选择发布类型</view>
+</view>
+
+<view class="page__bd">
+  <navigator class='item' url='tabLost/tabLost'>
+    <view class='navigator-text'>寻物启示</view>
+  </navigator>
+  <navigator class='item' url='tabFound/tabFound'>
+    <view class='navigator-text'>招领启示</view> 
+  </navigator>
+</view>

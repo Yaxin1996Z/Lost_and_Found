@@ -1,4 +1,4 @@
-// pages/page1/page1.js
+// pages/publish/publish.js
 Page({
 
   /**

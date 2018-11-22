@@ -1,21 +1,41 @@
 /**index.wxss**/
-.userinfo {
+
+.search-box {
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.search {
+  padding: 5px;
+}
+.search_btn{
+  margin: 0;
+  overflow: inherit;
+}
+.input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
 }
-
-.usermotto {
-  margin-top: 200px;
+.tab-item{
+    width: 50%; 
+    color:#434343;
+}
+.tab-item.active{
+  color:#F65959;
+  border-bottom: 4rpx solid #F65959;
+  }
+swiper{
+  text-align: center;
 }

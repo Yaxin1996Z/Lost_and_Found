@@ -2,12 +2,40 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/page1/page1"
+    "pages/publish/tabFound/tabFound",
+    "pages/publish/tabLost/tabLost",
+    "pages/userInfo/userInfo",
+    "pages/userInfo/myLost/myLost",
+    "pages/userInfo/myFound/myFound",
+    "pages/userInfo/myInfo/myInfo",
+    "pages/publish/publish"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Lost and Found",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/mainpage.png",
+        "selectedIconPath": "image/seclect_mainpage.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布启示",
+        "iconPath": "image/lost.png",
+        "selectedIconPath": "image/seclect_lost.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "信息中心",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/seclect_user.png"
+      }
+    ]
   }
 }

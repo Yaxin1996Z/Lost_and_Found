@@ -1,13 +1,24 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  
-  <view>版权信息：</view>
-  <view>西南交大电气学院 \n 电子信息工程</view>
+    <view class='search-box'>
+      <icon class='search' type='search'></icon>
+      <input class='input' type='text' placeholder='搜索...'></input>
+      <button size='mini' type='primary' class='search_btn'>search</button>
+    </view>
+
+  <view class="page__bd">
+    <view class='swiper-tab' scroll-x="true" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">寻物启示</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">招领启示</view>
+    </view>
+    <swiper class='tab-content' current="{{currentTab}}" duration='300'>
+      <swiper-item >
+111
+      </swiper-item>
+      <swiper-item >
+222
+      </swiper-item>
+    </swiper>
+</view>
+<view class='page__foot'>
+<view>西南交大电气学院 \n 电子信息工程</view> 
 </view>

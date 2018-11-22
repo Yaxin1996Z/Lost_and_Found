@@ -14,11 +14,11 @@ App({
     })
 
     // 调用微信扫一扫能力
-    wx.scanCode({
-      success: (res) => {
-      console.log(res)
-      }
-    })
+    // wx.scanCode({
+    //   success: (res) => {
+    //   console.log(res)
+    //   }
+    // })
     
     // 获取用户信息
     wx.getSetting({
