@@ -6,8 +6,10 @@
 <view class="page__bd">
   <navigator class='item' url='tabLost/tabLost'>
     <view class='navigator-text'>寻物启示</view>
+    <image class='icon' src='../../image/icon_right.png'></image>
   </navigator>
   <navigator class='item' url='tabFound/tabFound'>
     <view class='navigator-text'>招领启示</view> 
+    <image class='icon' src='../../image/icon_right.png'></image>
   </navigator>
 </view>

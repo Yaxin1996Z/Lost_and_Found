@@ -3,9 +3,9 @@
   <form bindsubmit='formSubmit' bindreset='formReset'>
     <view class='section'>
       <view class="section__title">物品类型：</view>
-      <picker bindchange='bindPickerChange' value="{{stuff.index}}" range="{{stufftype}}" mode="selector">
-          <view class='picker' name='type'>
-          {{stufftype[stuff.index]}}
+      <picker bindchange='bindPickerChange' value="{{index}}" range="{{stufftype}}" mode="selector" name='type'>
+          <view class='picker' >
+          {{stufftype[index]}}
           </view>
       </picker>
       <image class='icon' src='../../../image/icon_down.png'></image>
@@ -13,20 +13,14 @@
 
     <view class='section' style='display:flex;'>
       <view class="section__title">物品名称：</view>
-      <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd">
-              <input class="weui-input" name="name"/>
-            </view>
-          </view>
-        </view>
+      <input class="weui-input" name="name"/>
     </view>
 
     <view class='section'>
       <view class="section__title">丢失日期：</view>
-      <picker bindchange='bindDateChange' mode='date' start="2018-01-01" end="2019-01-01" value="{{stuff.date}}">
-        <view class='picker' name='date'>
-          {{stuff.date}}
+      <picker bindchange='bindDateChange' mode='date' start="2018-01-01" end="2019-01-01" value="{{date}}" name='date'>
+        <view class='picker' >
+          {{date}}
           </view>
       </picker>
       <image class='icon' src='../../../image/icon_down.png'></image>
@@ -34,13 +28,12 @@
 
     <view class='section'>
       <view class='section__title'>丢失地点：</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd">
-              <input class="weui-input" name="position"/>
-            </view>
-          </view>
-        </view>
+      <input class="weui-input" name="position"/>
+    </view>
+
+    <view class='section'>
+      <view class='section__title'>具体描述：</view>
+      <textarea name="description" auto-height=''></textarea>
     </view>
 
     <view class="btn-area">

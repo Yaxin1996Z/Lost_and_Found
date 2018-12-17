@@ -25,7 +25,3 @@
   display: flex;
   flex-direction: column;
 }
-.icon{
-  width: 60rpx;
-  height: 60rpx;
-}

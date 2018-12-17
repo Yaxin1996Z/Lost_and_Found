@@ -12,13 +12,23 @@
     </view>
     <swiper class='tab-content' current="{{currentTab}}" duration='300'>
       <swiper-item >
-111
+         <scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+          <!--等待框-->
+          <loading hidden="{{!loading}}">加载中...</loading>
+          <!-- 列表 -->
+          <view class='stuff-list' wx:for="{{stuffs}}" wx:key="id">
+              <!-- <text>物品类型：{{item.type}}</text> -->
+              <text>{{item.name}}\n</text>
+              <text>于{{item.date}}在{{item.position}}丢失\n</text>
+              <text>描述：{{item.description}}</text>
+          </view>
+        </scroll-view>
       </swiper-item>
       <swiper-item >
 222
       </swiper-item>
     </swiper>
 </view>
-<view class='page__foot'>
+<!-- <view class='page__foot'>
 <view>西南交大电气学院 \n 电子信息工程</view> 
-</view>
+</view> -->

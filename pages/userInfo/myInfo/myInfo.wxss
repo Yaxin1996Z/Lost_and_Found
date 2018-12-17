@@ -1,1 +1,4 @@
 /* pages/userInfo/myInfo/myInfo.wxss */
+input{
+  margin: 20px;
+}

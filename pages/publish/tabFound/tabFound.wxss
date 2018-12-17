@@ -1,1 +1,21 @@
-/* pages/tabFound/tabFound.wxss */
+/* pages/tabLost/tabLost.wxss */
+form {
+  width: 100%;
+}
+.section {
+  display: flex;
+  padding: 5px;
+}
+
+.section__title{
+  display: inline-block;
+  min-width: 180rpx;
+  margin-left: 20rpx;
+}
+
+input,textarea{
+  position: relative;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 17px;
+}

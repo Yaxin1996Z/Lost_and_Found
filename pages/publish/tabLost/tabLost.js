@@ -6,13 +6,11 @@ Page({
    */
   data: {
     stufftype:["钥匙","手机","一卡通","身份证","学生证","水杯","书本类","U盘","其他"],
-    stuff:{
-      index:0,
-      name:'',
-      date:'2018-09-01',
-      position:''
-    }
-
+    index:0,
+    date:'2018-09-01',
+    stuff:{},
+    userInfo:{},
+    // mylostId:[]
   },
   bindPickerChange: function (e) {
     console.log('丢失物品类型的索引为', e.detail.value);
@@ -28,26 +26,84 @@ Page({
   },
   formSubmit(e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    this.data.name = e.detail.value.name;
-    this.data.position = e.detail.value.position;
-    console.log(this.data.stuff)
+    this.setData({
+      stuff:e.detail.value
+    })
+    wx.request({
+      url: 'http://zhang1996.xyz:8080/lost_and_found/add_stuff.php',
+      //url:"../../../server.user.php",
+      data: {
+        table: 1,
+        userId: this.data.userInfo.userId,
+        type: this.data.stuff.type,
+        name: this.data.stuff.name,
+        date: this.data.stuff.date,
+        position: this.data.stuff.position,
+        description: this.data.stuff.description
+      },
+      success(res) {
+        console.log(res.data);
+        //判断失物id是否在数组中
+        // if (this.data.mylostId.indexOf(res.data) != -1) {
+        //   //是 不做任何操作
+        //   return null;
+        // } else {
+        //   //否，把失物id push到mylostId中
+        //   this.data.mylostId.push(res.data)
+        // };
+        // wx.setStorage({
+        //   key: 'mylostId',
+        //   data: this.data.mylostId,
+        // })
+
+        wx.showToast({
+          title: '登记成功',
+          icon: 'success',
+          duration: 10000
+        })
+
+        setTimeout(function () {
+          wx.hideToast()
+          wx.switchTab({
+            url: '../publish',
+          })
+        }, 5000)
+      }
+    })
+
+
   },
 
   formReset(e) {
     console.log('form发生了reset事件')
     this.setData({
       index: 0,
-      stuffname: '',
       date: '2018-09-01',
-      position: ''
+      stuff: {}
     })
   },
   /**
-T
   * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        that.setData({
+          userInfo: res.data
+        })
+        console.log(res.data);
+      }
+    });
+    // wx.getStorage({
+    //   key: 'mylostId',
+    //   success: function (res) {
+    //     for (let i in res.data) {
+    //       that.data.mylostId.push(res.data[i])
+    //     };
+    //   }
+    // })
   },
 
   /**

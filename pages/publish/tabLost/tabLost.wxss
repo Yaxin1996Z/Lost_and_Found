@@ -13,13 +13,7 @@ form {
   margin-left: 20rpx;
 }
 
-.icon{
-  width: 10px;
-  height: 10px;
-  padding: 5px;
-}
-
-input{
+input,textarea{
   position: relative;
   background-color: #FFFFFF;
   line-height: 1.41176471;

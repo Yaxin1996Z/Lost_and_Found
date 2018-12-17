@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -36,8 +36,21 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "lost",
+					"pathName": "pages/publish/tabLost/tabLost",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "info页",
+					"pathName": "pages/publish/tabLost/tabLost",
+					"query": ""
+				}
+			]
 		}
 	}
 }

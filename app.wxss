@@ -1,5 +1,5 @@
 /**app.wxss**/
-
+@import "weui.wxss";
 .container {
   height: 100%;
   display: flex;
@@ -27,6 +27,11 @@ page {
   text-align: center;
   color: #ccc;
   font-size: 25;
+}
+.icon{
+  width: 10px;
+  height: 10px;
+  padding: 5px;
 }
 checkbox, radio{
   margin-right: 10rpx;
