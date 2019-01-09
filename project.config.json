@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -39,15 +39,15 @@
 			"current": 1,
 			"list": [
 				{
-					"id": -1,
-					"name": "lost",
-					"pathName": "pages/publish/tabLost/tabLost",
+					"id": 0,
+					"name": "mylost",
+					"pathName": "pages/userInfo/myLost/myLost",
 					"query": ""
 				},
 				{
 					"id": 1,
 					"name": "info页",
-					"pathName": "pages/publish/tabLost/tabLost",
+					"pathName": "pages/userInfo/userInfo",
 					"query": ""
 				}
 			]

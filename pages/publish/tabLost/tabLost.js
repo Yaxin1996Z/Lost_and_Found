@@ -30,7 +30,7 @@ Page({
       stuff:e.detail.value
     })
     wx.request({
-      url: 'http://zhang1996.xyz:8080/lost_and_found/add_stuff.php',
+      url: 'https://zhang1996.xyz/lost_and_found/add_stuff.php',
       //url:"../../../server.user.php",
       data: {
         table: 1,
@@ -67,7 +67,7 @@ Page({
           wx.switchTab({
             url: '../publish',
           })
-        }, 5000)
+        }, 2000)
       }
     })
 

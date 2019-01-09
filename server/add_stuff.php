@@ -10,7 +10,7 @@
   $description=$_GET["description"];
   $table=$_GET["table"];
 if($table){
-  $sql = "INSERT INTO `stuff_lost`(`userId`, `type`, `name`, `date`, `position`, `description`) VALUES ('".$userId."',".$type.",'".$name."','".$date."','".$position."','".$description."')";
+  $sql = "INSERT INTO `stuff_lost`(`userId`, `type`, `name`, `date`, `position`, `description`,`state`) VALUES ('".$userId."',".$type.",'".$name."','".$date."','".$position."','".$description."',0)";
   $result = mysqli_query($con,$sql) or die('失物启示插入失败！</br>错误原因：'.mysqli_error($con));
 
   if ($result){
@@ -21,7 +21,7 @@ if($table){
     echo "fail to insert";
   }
 }else{
-  $sql = "INSERT INTO `stuff_found'(`userId`, `type`, `name`, `date`, `position`, `description`) VALUES ('".$userId."',".$type.",'".$name."','".$date."','".$position."','".$description."')";
+  $sql = "INSERT INTO `stuff_found`(`userId`, `type`, `name`, `date`, `position`, `description`,`state`) VALUES ('".$userId."',".$type.",'".$name."','".$date."','".$position."','".$description."',0)";
   $result = mysqli_query($con,$sql) or die('招领启示插入失败！</br>错误原因：'.mysqli_error($con));
 
   if ($result){

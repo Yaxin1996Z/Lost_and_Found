@@ -1,8 +1,8 @@
 <!--index.wxml-->
     <view class='search-box'>
       <icon class='search' type='search'></icon>
-      <input class='input' type='text' placeholder='搜索...'></input>
-      <button size='mini' type='primary' class='search_btn'>search</button>
+      <input class='input' type='text' placeholder='请输入失物类型' bindinput='inputName'></input>
+      <button size='mini' type='primary' class='search_btn' bindtap='findSomething'>search</button>
     </view>
 
   <view class="page__bd">
@@ -16,16 +16,30 @@
           <!--等待框-->
           <loading hidden="{{!loading}}">加载中...</loading>
           <!-- 列表 -->
-          <view class='stuff-list' wx:for="{{stuffs}}" wx:key="id">
-              <!-- <text>物品类型：{{item.type}}</text> -->
-              <text>{{item.name}}\n</text>
-              <text>于{{item.date}}在{{item.position}}丢失\n</text>
-              <text>描述：{{item.description}}</text>
+          <view class='stuff-list' wx:for="{{stuffs_lost}}" wx:for-item="stuff" wx:key="id" data-text="{{stuff.userId}}" bindtap='getOwnerInfo'>
+              <text>失物名称：{{stuff.name}}</text>
+              <view wx:for="{{typesec}}" wx:for-item="type" wx:for-index="ind" wx:key="id">
+                <view wx:if="{{ind==stuff.type}}">失物类型：{{type}}</view> 
+              </view>
+              <text>时间地点：于{{stuff.date}}在{{stuff.position}}丢失\n</text>
+              <text>物品描述：{{stuff.description}}</text>
           </view>
         </scroll-view>
       </swiper-item>
       <swiper-item >
-222
+<scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+          <!--等待框-->
+          <loading hidden="{{!loading}}">加载中...</loading>
+          <!-- 列表 -->
+          <view class='stuff-list' wx:for="{{stuffs_found}}" wx:for-item="stuff" wx:key="id" data-text="{{stuff.userId}}" bindtap='getOwnerInfo'>
+              <text>招领名称：{{stuff.name}}</text>
+              <view wx:for="{{typesec}}" wx:for-item="type" wx:for-index="ind" wx:key="id">
+                <view wx:if="{{ind==stuff.type}}">招领类型：{{type}}</view> 
+              </view>
+              <text>时间地点：于{{stuff.date}}在{{stuff.position}}捡到\n</text>
+              <text>物品描述：{{stuff.description}}</text>
+          </view>
+        </scroll-view>
       </swiper-item>
     </swiper>
 </view>

@@ -6,9 +6,11 @@
   $id=$_GET["id"];
 
 if($table){
-  $sql = "DELETE FROM `stuff_lost` where id = ".$id;
+  // $sql = "DELETE FROM `stuff_lost` where id = ".$id;
+  $sql = "update `stuff_lost` set state=1 where id = ".$id;
   $result = mysqli_query($con,$sql) or die('失物启示删除失败！</br>错误原因：'.mysqli_error($con));
 }else{
-  $sql = "SELECT * FROM `stuff_found` where id = ".$id;
+  // $sql = "SELECT * FROM `stuff_found` where id = ".$id;
+  $sql = "update `stuff_found` set state=1 where id = ".$id;
   $result = mysqli_query($con,$sql) or die('招领启示删除失败！</br>错误原因：'.mysqli_error($con));
 }

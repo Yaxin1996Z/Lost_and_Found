@@ -1,1 +1,15 @@
-/* pages/userInfo/myFound/myFound.wxss */
+swiper{
+  /* text-align: center; */
+  height: 345px;
+}
+.scroll-views{
+  height: 100%;
+  display: inline-block;
+}
+.stuff-list {
+  padding: 20rpx 40rpx;
+  margin: 20rpx 0;
+  border-radius: 4rpx;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #eee;
+}

@@ -11,7 +11,7 @@
     "pages/publish/publish"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Lost and Found",
     "navigationBarTextStyle": "black"

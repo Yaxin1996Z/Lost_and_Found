@@ -17,8 +17,8 @@
     </view>
 
     <view class='section'>
-      <view class="section__title">丢失日期：</view>
-      <picker bindchange='bindDateChange' mode='date' start="2018-01-01" end="2019-01-01" value="{{date}}" name='date'>
+      <view class="section__title">捡到日期：</view>
+      <picker bindchange='bindDateChange' mode='date' start="2015-01-01" end="2020-01-01" value="{{date}}" name='date'>
         <view class='picker' >
           {{date}}
           </view>
@@ -27,7 +27,7 @@
     </view>
 
     <view class='section'>
-      <view class='section__title'>丢失地点：</view>
+      <view class='section__title'>捡到地点：</view>
       <input class="weui-input" name="position"/>
     </view>
 

@@ -1,2 +1,15 @@
-<!--pages/userInfo/myFound/myFound.wxml-->
-<text>pages/userInfo/myFound/myFound.wxml</text>
+<scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+  <!--等待框-->
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <!-- 列表 -->
+  <view class='stuff-list' wx:for="{{stuffs_found}}" wx:for-item="stuff" wx:key="id" data-text="{{stuff.userId}}">
+      <text>招领名称：{{stuff.name}}</text>
+      <view wx:for="{{typesec}}" wx:for-item="type" wx:for-index="ind" wx:key="id">
+      <view wx:if="{{ind==stuff.type}}">招领类型：{{type}}</view> 
+      </view>
+      <text>时间地点：于{{stuff.date}}在{{stuff.position}}捡到\n</text>
+      <text>物品描述：{{stuff.description}}</text>
+      <icon type='cancel' size='20' style='float:right' data-text="{{stuff.id}}" data-index="{{index}}" bindtap='askDelete'></icon>
+  </view>
+  
+  </scroll-view>

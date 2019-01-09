@@ -10,7 +10,7 @@
             </view>
             <view class="weui-cell__bd">
               <view class="weui-input">
-                <input name="userId" value='{{userInfo.userId}}' disabled='{{userInfo.userId?true:false}}' ></input>
+                <input name="userId" value='{{userInfo.userId}}' disabled='{{userInfo.userId?true:false}}' bindblur='testUserId'></input>
               </view>
             </view>
           </view>

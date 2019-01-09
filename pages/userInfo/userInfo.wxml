@@ -10,12 +10,12 @@
 </view>
 <view class="page__bd">
   <navigator class='item' url='myLost/myLost'>
-    <view class='navigator-text'>我的丢失</view>
+    <view class='navigator-text'>我的寻物启示</view>
     <!-- <view class="navigator-arrow"></view> -->
     <image class='icon' src='../../image/icon_right.png'></image>
   </navigator>
   <navigator class='item' url='myFound/myFound'>
-    <view class='navigator-text'>我的捡拾</view>
+    <view class='navigator-text'>我的招领启示</view>
     <image class='icon' src='../../image/icon_right.png'></image>
   </navigator>
   <navigator class='item' url='myInfo/myInfo'>

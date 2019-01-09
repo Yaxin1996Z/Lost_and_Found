@@ -25,7 +25,7 @@ Page({
     console.log(this.data.todo);
     //访问数据库，若用户名已存在，返回illegel；若用户名合法，保存用户
     wx.request({
-      url: 'http://zhang1996.xyz:8080/lost_and_found/user.php',
+      url: 'https://zhang1996.xyz/lost_and_found/user.php',
       //url:"../../../server.user.php",
       data:{
         todo:this.data.todo,
@@ -40,6 +40,46 @@ Page({
           console.log("用户名已存在");
         } else{    
           console.log("用户保存成功");
+        }
+      }
+    })
+    setTimeout(function () {
+      wx.hideToast()
+      wx.switchTab({
+        url: '../userInfo',
+      })
+    }, 1000)
+  },
+
+  testUserId:function(event){
+    var that=this;
+    var userId=event.detail.value;
+    wx.request({
+      url: 'https://zhang1996.xyz/lost_and_found/idLegal.php',
+      //url:"../../../server.user.php",
+      data: {
+          userId:userId
+      },
+      success(res) {
+        if(res.data){
+          wx.showModal({
+            title: '提示',
+            content: '该用户名已存在，请重新填写',
+            success: function (sm) {
+              if (sm.confirm) {
+                console.log("用户点击确定");
+                var user=that.data.userInfo;
+                user.userId='';
+                that.setData({
+                  userInfo: user
+                })
+              } else if (sm.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }else{
+          console.log("用户名合法");
         }
       }
     })
